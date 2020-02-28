@@ -20,6 +20,13 @@ namespace Week5ConsoleApp
             Console.WriteLine("a = " + a);
             Console.WriteLine("b = " + b);
             Console.WriteLine("Output of sum(a, b) = " + c);
+
+            string phrase = "This is a test phrase to count from 1,2,3...";
+            
+            int whitespaceCount = GetWhitespaceCount(phrase);
+            Console.WriteLine("Phrase: \"" + phrase  + "\"\ncontains " +  whitespaceCount + " whitespace characters.");
+
+
         }
 
         public static void SayHello()
@@ -45,6 +52,20 @@ namespace Week5ConsoleApp
         public static int Sum(int a, int b)
         {
             return a + b;
+        }
+
+        public static int GetWhitespaceCount(string phrase)
+        {
+            int count = 0;
+            for (int i = 0; i < phrase.Length; i++)
+            {
+                if (phrase[i].Equals(' '))
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }
